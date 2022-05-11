@@ -21,7 +21,7 @@ async function buildBundle(components, format, browser, cb) {
   const needSourceMap = env === 'production' && (format === 'umd' || (format === 'esm' && browser));
 
   return rollup({
-    input: './src/swiper.js',
+    input: './src/swiper.js', // 入口文件
     external,
     plugins: [
       replace({
