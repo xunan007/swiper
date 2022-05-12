@@ -18,12 +18,12 @@ import transition from './transition/index';
 import slide from './slide/index';
 import loop from './loop/index';
 // import grabCursor from './grab-cursor/index'; // 鼠标抓手
-import manipulation from './manipulation/index';
-import events from './events/index';
-import breakpoints from './breakpoints/index';
-import classes from './classes/index';
-import images from './images/index';
-import checkOverflow from './check-overflow/index';
+import manipulation from './manipulation/index'; // 操作 slide
+import events from './events/index'; // 事件监听
+// import breakpoints from './breakpoints/index'; // 断点响应
+import classes from './classes/index'; // 类的添加和删除处理
+import images from './images/index'; // 图片加载相关
+import checkOverflow from './check-overflow/index'; // overflow 逻辑检测
 
 import defaults from './defaults';
 
@@ -38,7 +38,7 @@ const prototypes = {
   // grabCursor,
   manipulation,
   events,
-  breakpoints,
+  // breakpoints,
   checkOverflow,
   classes,
   images,
@@ -356,9 +356,9 @@ class Swiper {
     if (!swiper || swiper.destroyed) return;
     const { snapGrid, params } = swiper;
     // Breakpoints
-    if (params.breakpoints) {
-      swiper.setBreakpoint();
-    }
+    // if (params.breakpoints) {
+    //   swiper.setBreakpoint();
+    // }
     swiper.updateSize();
     swiper.updateSlides();
     swiper.updateProgress();

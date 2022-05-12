@@ -50,8 +50,8 @@ export default {
   effect: 'slide', // 'slide' or 'fade' or 'cube' or 'coverflow' or 'flip'
 
   // Breakpoints
-  breakpoints: undefined,
-  breakpointsBase: 'window',
+  // breakpoints: undefined,
+  // breakpointsBase: 'window',
 
   // Slides grid
   spaceBetween: 0,
