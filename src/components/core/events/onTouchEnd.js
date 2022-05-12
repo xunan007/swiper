@@ -13,22 +13,22 @@ export default function onTouchEnd(event) {
   }
   data.allowTouchCallbacks = false;
   if (!data.isTouched) {
-    if (data.isMoved && params.grabCursor) {
-      swiper.setGrabCursor(false);
-    }
+    // if (data.isMoved && params.grabCursor) {
+    //   swiper.setGrabCursor(false);
+    // }
     data.isMoved = false;
     data.startMoving = false;
     return;
   }
   // Return Grab Cursor
-  if (
-    params.grabCursor &&
-    data.isMoved &&
-    data.isTouched &&
-    (swiper.allowSlideNext === true || swiper.allowSlidePrev === true)
-  ) {
-    swiper.setGrabCursor(false);
-  }
+  // if (
+  //   params.grabCursor &&
+  //   data.isMoved &&
+  //   data.isTouched &&
+  //   (swiper.allowSlideNext === true || swiper.allowSlidePrev === true)
+  // ) {
+  //   swiper.setGrabCursor(false);
+  // }
 
   // Time diff
   const touchEndTime = now();

@@ -1,10 +1,10 @@
 /* eslint no-param-reassign: "off" */
-import { getDocument } from 'ssr-window';
-import $ from '../../utils/dom';
-import { extend, now, deleteProps } from '../../utils/utils';
-import { getSupport } from '../../utils/get-support';
-import { getDevice } from '../../utils/get-device';
-import { getBrowser } from '../../utils/get-browser';
+import { getDocument } from 'ssr-window'; // 用于在 ssr 中获取 document
+import $ from '../../utils/dom'; // 包含 jquery 中的相关 dom 操作
+import { extend, now, deleteProps } from '../../utils/utils'; // 工具函数
+import { getSupport } from '../../utils/get-support'; // 各种浏览器 API 能力检测
+import { getDevice } from '../../utils/get-device'; // 获取设备类型
+import { getBrowser } from '../../utils/get-browser'; // 获取浏览器类型
 
 import Resize from '../../modules/resize/resize';
 import Observer from '../../modules/observer/observer';
@@ -17,7 +17,7 @@ import translate from './translate/index';
 import transition from './transition/index';
 import slide from './slide/index';
 import loop from './loop/index';
-import grabCursor from './grab-cursor/index';
+// import grabCursor from './grab-cursor/index'; // 鼠标抓手
 import manipulation from './manipulation/index';
 import events from './events/index';
 import breakpoints from './breakpoints/index';
@@ -35,7 +35,7 @@ const prototypes = {
   transition,
   slide,
   loop,
-  grabCursor,
+  // grabCursor,
   manipulation,
   events,
   breakpoints,
@@ -255,9 +255,9 @@ class Swiper {
     const swiper = this;
     if (swiper.enabled) return;
     swiper.enabled = true;
-    if (swiper.params.grabCursor) {
-      swiper.setGrabCursor();
-    }
+    // if (swiper.params.grabCursor) {
+    //   swiper.setGrabCursor();
+    // }
     swiper.emit('enable');
   }
 
@@ -265,9 +265,9 @@ class Swiper {
     const swiper = this;
     if (!swiper.enabled) return;
     swiper.enabled = false;
-    if (swiper.params.grabCursor) {
-      swiper.unsetGrabCursor();
-    }
+    // if (swiper.params.grabCursor) {
+    //   swiper.unsetGrabCursor();
+    // }
     swiper.emit('disable');
   }
 
@@ -526,9 +526,9 @@ class Swiper {
     }
 
     // Set Grab Cursor
-    if (swiper.params.grabCursor && swiper.enabled) {
-      swiper.setGrabCursor();
-    }
+    // if (swiper.params.grabCursor && swiper.enabled) {
+    //   swiper.setGrabCursor();
+    // }
 
     if (swiper.params.preloadImages) {
       swiper.preloadImages();

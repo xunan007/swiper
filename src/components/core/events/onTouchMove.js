@@ -129,9 +129,9 @@ export default function onTouchMove(event) {
     }
     data.allowMomentumBounce = false;
     // Grab Cursor
-    if (params.grabCursor && (swiper.allowSlideNext === true || swiper.allowSlidePrev === true)) {
-      swiper.setGrabCursor(true);
-    }
+    // if (params.grabCursor && (swiper.allowSlideNext === true || swiper.allowSlidePrev === true)) {
+    //   swiper.setGrabCursor(true);
+    // }
     swiper.emit('sliderFirstMove', e);
   }
   swiper.emit('sliderMove', e);

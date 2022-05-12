@@ -101,7 +101,7 @@ export default {
   watchSlidesVisibility: false,
 
   // Cursor
-  grabCursor: false,
+  // grabCursor: false,
 
   // Clicks
   preventClicks: true,
